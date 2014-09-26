@@ -2,7 +2,11 @@ block a {
 
     default: {
         console.log('in empty mod this', this); // где поле block, elem, etc.?!
-        console.log('in empty mod this.block', this.block); // WAAAAT!? откуда!?
+        console.log('in empty mod this.block --', this.block); // WAAAAT!? откуда!?
+
+        [1, 2].map(function(number) {
+            console.log('this.block in MAP --', this.block);
+        }, this);
 
         return applyNext();
     }
