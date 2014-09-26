@@ -1,6 +1,6 @@
 ({
     mustDeps: {
         block: 'i-bem',
-        elems: ['html', 'extend']
+        elems: ['html']
     }
 })

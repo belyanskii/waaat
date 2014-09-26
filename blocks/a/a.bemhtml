@@ -1,8 +1,8 @@
 block a {
 
     default: {
-        console.log('in empty mod this', Object.getPrototypeOf(this)); // !?
-        console.log('in empty mod this.block', this.block); // WAAAAT!?
+        console.log('in empty mod this', Object.getPrototypeOf(this)); // где поле block, elem, etc.?!
+        console.log('in empty mod this.block', this.block); // WAAAAT!? откуда!?
 
         return applyNext();
     }
