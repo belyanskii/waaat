@@ -1,1 +1,1 @@
-({block: 'a',content: { elem: 'b' }})
+({block: 'a'})
