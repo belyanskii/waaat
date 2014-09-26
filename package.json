@@ -1,0 +1,13 @@
+{
+    "name": "bem-bl-xjst-test",
+    "author": "einstain",
+    "version": "0.0.0",
+    "description": "test",
+    "repository": "bem-bl-xjst-test",
+    "keywords": ["test"],
+    "dependencies": {
+        "bem-bl-xjst": "2.0.2",
+        "enb-xjst": "^1.2.0",
+        "enb": "^0.13.4"
+    }
+}

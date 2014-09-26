@@ -1,0 +1,10 @@
+block a {
+
+    default: {
+        console.log('in empty mod this', Object.getPrototypeOf(this)); // !?
+        console.log('in empty mod this.block', this.block); // WAAAAT!?
+
+        return applyNext();
+    }
+
+}
