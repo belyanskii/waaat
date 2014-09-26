@@ -2,12 +2,6 @@
     "name": "bem-bl-xjst-test",
     "version": "0.0.0",
     "description": "test",
-    "keywords": [
-        "test"
-    ],
-    "authors": [
-        "Vyacheslav Aristov <einstain@yandex-team.ru>"
-    ],
     "dependencies": {
         "bem-bl": "git://github.com/bem/bem-bl.git"
     },
