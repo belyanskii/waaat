@@ -2,8 +2,8 @@
 .idea/
 libs/
 node_modules/
-.bem/tmp/
- bundles/index/index.bemhtml.js
- bundles/index/index.deps.js
- bundles/index/index.bemdecl.js
- bundles/index/index.html
+.bem/tmp/cache.js
+bundles/index/index.bemhtml.js
+bundles/index/index.deps.js
+bundles/index/index.bemdecl.js
+bundles/index/index.html
