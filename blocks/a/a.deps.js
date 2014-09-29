@@ -1,6 +1,11 @@
 ({
-    mustDeps: {
-        block: 'i-bem',
-        elems: ['html']
-    }
+    mustDeps: [
+        {
+            block: 'i-bem',
+            elems: ['html']
+        },
+        {
+            block: 'b'
+        }
+    ]
 })

@@ -1,14 +1,21 @@
 block a {
 
-    default: {
-        console.log('in empty mod this', this); // где поле block, elem, etc.?!
-        console.log('in empty mod this.block --', this.block); // WAAAAT!? откуда!?
+    content: {
 
-        [1, 2].map(function(number) {
-            console.log('this.block in MAP --', this.block);
+        var arr = [1, 2];
+
+        var res = arr.map(function(n) {
+            return apply(
+                'default',
+                this.block = 'b',
+                this.ctx.n = n
+            );
         }, this);
 
-        return applyNext();
+        console.log('RES', res);
+
+        return res;
+
     }
 
 }

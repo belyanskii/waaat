@@ -1,22 +1,21 @@
 extend: undefined
 
-default,
-this.ctx.extend !== false:
+default, this.ctx.extend !== false:
 {
     var extend = apply('extend');
 
     if (!extend) return apply(this.ctx.extend = false);
 
     var ctx = this.ctx,
+        blockName = this.inherit || this.block,
         ce = ctx.extend || {},
         content = apply('content') || ctx.content,
         _extend = this._.extend;
 
-    ['mods', 'elemMods', 'js', 'attrs']
-        .forEach(
-            function(item) {
-                ce[item] = _extend(extend[item], ce[item]);
-            });
+    if (extend.mods && ce.mods) ce.mods = _extend(extend.mods, ce.mods);
+    if (extend.elemMods && ce.elemMods) ce.elemMods = _extend(extend.elemMods, ce.elemMods);
+    if (extend.js && ce.js) ce.js = _extend(extend.js, ce.js);
+    if (extend.attrs && ce.attrs) ce.attrs = _extend(extend.attrs, ce.attrs);
 
     if (extend.mix || ce.mix) {
         ce.mix = (ce.mix || []).concat(extend.mix || []);
@@ -25,7 +24,7 @@ this.ctx.extend !== false:
         ce.mix = [ ctx ]
             .concat(ctx.mix || [], apply('mix') || [])
             .map(function(item) {
-                item.block || (item.block = this.block);
+                item.block || (item.block = blockName);
                 return item;
             }, this);
     }
@@ -36,12 +35,10 @@ this.ctx.extend !== false:
             this._buf = [],
             this.ctx = content)
             {
-                this.apply();
+                apply();
                 ce.content = this._buf.join('');
             }
     }
 
-    apply(
-        this._mode = '',
-        this.ctx = _extend(extend, ce));
+    apply(this._mode = '', this.ctx = _extend(extend, ce));
 }
